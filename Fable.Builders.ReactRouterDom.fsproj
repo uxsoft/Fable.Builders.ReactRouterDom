@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Authors>uxsoft</Authors>
+        <Description>Fable computation expression based bindings for the react-router-dom library</Description>
+        <PackageProjectUrl>https://github.com/uxsoft/Fable.Builders.ReactRouterDom</PackageProjectUrl>
+        <PackageIcon>icon.png</PackageIcon>
+        <RepositoryUrl>https://github.com/uxsoft/Fable.Builders.ReactRouterDom</RepositoryUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="Router.fs" />
+        <None Include="README.md" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Fable.Builders.React" Version="4.7.0" />
+        <PackageReference Include="Feliz" Version="1.59.0" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="*.fsproj; **\*.fs">
+            <Pack>True</Pack>
+            <PackagePath>fable\</PackagePath>
+        </Content>
+        <Content Include=".gitignore" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include=".\icon.png">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+    </ItemGroup>
+</Project>
