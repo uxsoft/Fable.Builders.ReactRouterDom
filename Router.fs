@@ -1,6 +1,7 @@
 module Fable.Builders.ReactRouterDom
 
 open Fable.Builders.Common
+open Fable.Core
 open Fable.Core.JsInterop
 open Fable.React
 
@@ -41,3 +42,6 @@ let Route = RouteBuilder()
 type OutletBuilder() =
     inherit ReactBuilder(import "Outlet" "react-router-dom")
 let Outlet = OutletBuilder()
+
+[<ImportMember("react-router-dom")>]
+let useParams<'T>() : 'T = jsNative

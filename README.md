@@ -1,23 +1,27 @@
-# Fable.Builders.Emotion
+# Fable.Builders.ReactRouterDom
 
 ## Getting Started
 
 ```bash
-yarn add @emotion/css
-dotnet package add Fable.Builders.Emotion
+yarn add react-router-dom
+dotnet package add Fable.Builders.ReactRouterDom
 ```
 
 
 ## Usage
 
 ```fsharp
-    div {
-        css [
-            style.backgroundColor color.red
-            style.hover [
-                style.backgroundColor color.blue
-            ]
-        ]
-        str "Emotion"
+    [<StringEnum>] Page = SyntaxPage | ButtonPage
+
+    BrowserRouter {
+        Routes {
+            Route {
+                path "/"
+                element (App model dispatch)
+                
+                Route { path (string Page.SyntaxPage); element (SyntaxPage.view model) }
+                Route { path (string Page.ButtonPage); element (ButtonPage.view model) }
+            }
+        }
     }
 ```
