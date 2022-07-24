@@ -47,8 +47,10 @@ let Outlet = OutletBuilder()
 [<ImportMember("react-router-dom")>]
 let useParams<'T>() : 'T = jsNative
 
+
+type NavigateFn = string -> {| replace: bool; state: obj |} -> unit
 [<ImportMember("react-router-dom")>]
-let useNavigate : (unit -> (string -> {| replace: bool; state: obj |} -> unit)) = jsNative
+let useNavigate : (unit -> NavigateFn) = jsNative
 
 [<ImportMember("react-router-dom")>]
 let useLocation : (unit -> Location) = jsNative
