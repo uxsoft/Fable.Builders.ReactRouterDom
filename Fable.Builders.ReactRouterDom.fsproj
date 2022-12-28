@@ -10,13 +10,14 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <Compile Include="Builders.fs" />
         <Compile Include="Router.fs" />
         <None Include="README.md" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Fable.Builders.React" Version="4.10.0" />
-        <PackageReference Include="Feliz" Version="1.59.0" />
+        <PackageReference Include="Fable.Builders.React" Version="4.11.0" />
+        <PackageReference Include="Feliz" Version="2.3.0" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="*.fsproj; **\*.fs">
