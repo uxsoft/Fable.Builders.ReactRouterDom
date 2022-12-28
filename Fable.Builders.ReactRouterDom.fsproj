@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>netstandard2.0</TargetFramework>
         <Authors>uxsoft</Authors>
         <Description>Fable computation expression based bindings for the react-router-dom library</Description>
         <PackageProjectUrl>https://github.com/uxsoft/Fable.Builders.ReactRouterDom</PackageProjectUrl>
@@ -15,7 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Fable.Builders.React" Version="4.7.0" />
+        <PackageReference Include="Fable.Builders.React" Version="4.10.0" />
         <PackageReference Include="Feliz" Version="1.59.0" />
     </ItemGroup>
     <ItemGroup>
